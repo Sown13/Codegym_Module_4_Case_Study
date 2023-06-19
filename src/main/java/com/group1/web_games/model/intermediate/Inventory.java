@@ -19,5 +19,5 @@ public class Inventory {
     private GameSession gameSession;
     @ManyToOne
     private Item item;
-    private String image;
+    private String inventoryImage;
 }

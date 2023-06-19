@@ -21,4 +21,6 @@ public class Skill {
     private String skillSpecial;
     private String skillCost;
     private int skillLevel;
+    private String skillImage;
+
 }

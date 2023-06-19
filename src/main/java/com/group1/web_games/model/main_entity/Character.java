@@ -23,5 +23,5 @@ public class Character {
     private int characterMind;
     private int statPoint;
     private int skillPoint;
-
+    private String characterImage;
 }

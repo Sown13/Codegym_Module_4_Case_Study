@@ -17,4 +17,5 @@ public class EquipmentSlot {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long equipmentSlotId;
     private String equipmentSlotName;
+    private String equipmentSlotImage;
 }

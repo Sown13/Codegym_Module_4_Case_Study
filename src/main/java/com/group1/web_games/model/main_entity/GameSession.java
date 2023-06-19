@@ -18,5 +18,6 @@ public class GameSession {
     private double money;
     @ManyToOne
     private User user;
+    private String gameSessionImage;
 
 }

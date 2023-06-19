@@ -21,5 +21,6 @@ public class Item {
     private int itemMind;
     private String itemSpecial;
     private double itemPrice;
+    private String itemImage;
 
 }
