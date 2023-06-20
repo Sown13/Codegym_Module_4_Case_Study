@@ -1,4 +1,4 @@
-package com.group1.web_games.controller;
+package com.group1.web_games.controller.main_controller;
 
 import com.group1.web_games.model.main_entity.EquipmentSlot;
 import com.group1.web_games.service.equipment_slot.IEquipmentSlotSer;

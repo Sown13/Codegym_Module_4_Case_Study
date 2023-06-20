@@ -3,9 +3,10 @@ package com.group1.web_games.service.character_detail;
 import com.group1.web_games.model.main_entity.CharacterDetail;
 import com.group1.web_games.repo.main_entity_repo.ICharacterDetailRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-
+@Service
 public class CharacterDetailService implements ICharacterDetailService {
     @Autowired
     private ICharacterDetailRepo characterDetailRepo;
