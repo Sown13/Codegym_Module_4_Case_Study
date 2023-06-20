@@ -20,5 +20,5 @@ public class CharacterDetail {
     private int magicAtk;
     private int magicDef;
     @OneToOne
-    private Character character;
+    private GameCharacter gameCharacter;
 }

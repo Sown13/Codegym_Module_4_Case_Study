@@ -1,6 +1,6 @@
 package com.group1.web_games.model.intermediate;
 
-import com.group1.web_games.model.main_entity.Character;
+import com.group1.web_games.model.main_entity.GameCharacter;
 import com.group1.web_games.model.main_entity.Skill;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -16,7 +16,7 @@ public class CharacterSkill {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long characterSkillId;
     @ManyToOne
-    private Character character;
+    private GameCharacter gameCharacter;
     @ManyToOne
     private Skill skill;
 }

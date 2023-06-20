@@ -1,6 +1,6 @@
 package com.group1.web_games.model.intermediate;
 
-import com.group1.web_games.model.main_entity.Character;
+import com.group1.web_games.model.main_entity.GameCharacter;
 import com.group1.web_games.model.main_entity.Item;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,5 +18,5 @@ public class CharacterItem {
     @ManyToOne
     private Item item;
     @ManyToOne
-    private Character character;
+    private GameCharacter gameCharacter;
 }
