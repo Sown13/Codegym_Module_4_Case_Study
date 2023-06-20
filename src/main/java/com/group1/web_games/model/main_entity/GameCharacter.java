@@ -24,4 +24,5 @@ public class GameCharacter {
     private int statPoint;
     private int skillPoint;
     private String characterImage;
+    private boolean alive;
 }

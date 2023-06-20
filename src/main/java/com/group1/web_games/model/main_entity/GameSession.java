@@ -1,6 +1,5 @@
 package com.group1.web_games.model.main_entity;
 
-import com.group1.web_games.model.main_entity.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,7 +16,8 @@ public class GameSession {
     private String gameSessionName;
     private double money;
     @ManyToOne
-    private User user;
+    private UserEntity userEntity;
     private String gameSessionImage;
+    private int stage;
 
 }

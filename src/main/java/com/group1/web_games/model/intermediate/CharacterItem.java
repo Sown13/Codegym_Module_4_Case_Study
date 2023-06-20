@@ -1,7 +1,7 @@
 package com.group1.web_games.model.intermediate;
 
 import com.group1.web_games.model.main_entity.GameCharacter;
-import com.group1.web_games.model.main_entity.Item;
+import com.group1.web_games.model.main_entity.GameItem;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,7 +16,7 @@ public class CharacterItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long characterItemId;
     @ManyToOne
-    private Item item;
+    private GameItem gameItem;
     @ManyToOne
     private GameCharacter gameCharacter;
 }

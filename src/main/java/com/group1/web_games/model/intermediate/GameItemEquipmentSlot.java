@@ -1,7 +1,7 @@
 package com.group1.web_games.model.intermediate;
 
 import com.group1.web_games.model.main_entity.EquipmentSlot;
-import com.group1.web_games.model.main_entity.Item;
+import com.group1.web_games.model.main_entity.GameItem;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,12 +11,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ItemEquipmentSlot {
+public class GameItemEquipmentSlot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long itemEquipmentSlotId;
+    private Long gameItemEquipmentSlotId;
     @ManyToOne
     private EquipmentSlot equipmentSlot;
     @ManyToOne
-    private Item item;
+    private GameItem gameItem;
 }

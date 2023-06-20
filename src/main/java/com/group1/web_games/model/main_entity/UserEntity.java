@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
@@ -19,4 +19,5 @@ public class User {
     private String accountName;
     private String accountPassword;
     private String userAvatar;
+    private boolean block;
 }

@@ -1,7 +1,7 @@
 package com.group1.web_games.model.intermediate;
 
 import com.group1.web_games.model.main_entity.GameSession;
-import com.group1.web_games.model.main_entity.Item;
+import com.group1.web_games.model.main_entity.GameItem;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +18,6 @@ public class Inventory {
     @ManyToOne
     private GameSession gameSession;
     @ManyToOne
-    private Item item;
+    private GameItem gameItem;
     private String inventoryImage;
 }
