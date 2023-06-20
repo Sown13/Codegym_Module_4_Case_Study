@@ -19,4 +19,5 @@ public class CharacterEquipmentSlot {
     private EquipmentSlot equipmentSlot;
     @ManyToOne
     private GameCharacter gameCharacter;
+
 }
