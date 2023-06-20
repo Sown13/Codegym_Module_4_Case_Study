@@ -1,4 +1,4 @@
-package com.group1.web_games.controller.main_controller;
+package com.group1.web_games.controller.intermediate;
 
 import com.group1.web_games.model.intermediate.CharacterEquipmentSlot;
 import com.group1.web_games.service.characte_equipment_slot.ICharacterEquipmentSlotService;

@@ -1,4 +1,4 @@
-package com.group1.web_games.controller.main_controller;
+package com.group1.web_games.controller.intermediate;
 
 import com.group1.web_games.model.intermediate.CharacterItem;
 
