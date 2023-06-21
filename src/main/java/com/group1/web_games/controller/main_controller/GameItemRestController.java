@@ -1,7 +1,6 @@
 package com.group1.web_games.controller.main_controller;
 
 
-import com.group1.web_games.model.main_entity.GameCharacter;
 import com.group1.web_games.model.main_entity.GameItem;
 import com.group1.web_games.service.game_item.IGameItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/game-item")
-public class GameItemController {
+public class GameItemRestController {
 
     @Autowired
     private IGameItemService gameItemService;

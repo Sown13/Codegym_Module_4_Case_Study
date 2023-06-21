@@ -11,7 +11,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/inventory")
-public class InventoryController {
+public class InventoryRestController {
     @Autowired
     private IInventoryService iInventoryService;
     @PostMapping

@@ -11,7 +11,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/game-item-equipment-slot")
-public class GameItemEquipmentSlotController {
+public class GameItemEquipmentSlotRestController {
     @Autowired
     private IGameItemEquipmentSlotService gameItemEquipmentSlotService;
     @PostMapping

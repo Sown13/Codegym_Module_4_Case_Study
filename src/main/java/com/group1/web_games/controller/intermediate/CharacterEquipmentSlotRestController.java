@@ -12,7 +12,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/character-equipment-slot")
-public class CharacterEquipmentSlotController {
+public class CharacterEquipmentSlotRestController {
     @Autowired
     private ICharacterEquipmentSlotService characterEquipmentSlotService;
     @PostMapping

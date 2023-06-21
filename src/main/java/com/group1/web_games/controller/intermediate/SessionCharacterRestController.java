@@ -11,7 +11,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("session-character")
-public class SessionCharacterController {
+public class SessionCharacterRestController {
     @Autowired
     private ISessionCharacterService sessionCharacterService;
     @PostMapping
