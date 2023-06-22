@@ -20,4 +20,12 @@ public class GameSession {
     private String gameSessionImage;
     private int stage;
 
+    public GameSession(String gameSessionName, double money, UserEntity userEntity, String gameSessionImage, int stage) {
+        this.gameSessionName = gameSessionName;
+        this.money = money;
+        this.userEntity = userEntity;
+        this.gameSessionImage = gameSessionImage;
+        this.stage = stage;
+    }
+
 }
