@@ -45,11 +45,11 @@ alter table character_item
         foreign key (game_character_character_id) references game_character (character_id)
             on update cascade on delete cascade;
 alter table character_item
-drop foreign key FK7rgg6b0rrsqnbibghpw0p3284;
+drop foreign key FK12g405kc1q9vtctoj5gy34mwa;
 
 alter table character_item
-    add constraint FK7rgg6b0rrsqnbibghpw0p3284
-        foreign key (item_item_id) references item (item_id)
+    add constraint FK12g405kc1q9vtctoj5gy34mwa
+        foreign key (game_item_item_id) references game_item (item_id)
             on delete cascade;
 
 alter table character_item
@@ -60,11 +60,11 @@ alter table character_item
         foreign key (game_character_character_id) references game_character (character_id)
             on update cascade on delete cascade;
 alter table character_item
-drop foreign key FK7rgg6b0rrsqnbibghpw0p3284;
+drop foreign key FK12g405kc1q9vtctoj5gy34mwa;
 
 alter table character_item
-    add constraint FK7rgg6b0rrsqnbibghpw0p3284
-        foreign key (item_item_id) references item (item_id)
+    add constraint FK12g405kc1q9vtctoj5gy34mwa
+        foreign key (game_item_item_id) references game_item (item_id)
             on update cascade on delete cascade;
 
 alter table character_item
@@ -119,49 +119,49 @@ alter table character_skill
     add constraint FKomr6e7vp5xqpv19tg7csmu9d3
         foreign key (skill_skill_id) references skill (skill_id)
             on update cascade on delete cascade;
-alter table item_equipment_slot
-drop foreign key FKli98rjngh1twawcfvaut3uy9e;
+alter table game_item_equipment_slot
+drop foreign key FKgnixg5bn5326oajlai20jao6r;
 
-alter table item_equipment_slot
-    add constraint FKli98rjngh1twawcfvaut3uy9e
+alter table game_item_equipment_slot
+    add constraint FKgnixg5bn5326oajlai20jao6r
         foreign key (equipment_slot_equipment_slot_id) references equipment_slot (equipment_slot_id)
             on delete cascade;
-alter table item_equipment_slot
-drop foreign key FKli98rjngh1twawcfvaut3uy9e;
+alter table game_item_equipment_slot
+drop foreign key FKgnixg5bn5326oajlai20jao6r;
 
-alter table item_equipment_slot
-    add constraint FKli98rjngh1twawcfvaut3uy9e
+alter table game_item_equipment_slot
+    add constraint FKgnixg5bn5326oajlai20jao6r
         foreign key (equipment_slot_equipment_slot_id) references equipment_slot (equipment_slot_id)
             on update cascade on delete cascade;
-alter table item_equipment_slot
-drop foreign key FKbaoixndgp4ivk11dv738sf274;
+alter table game_item_equipment_slot
+drop foreign key FKfdtxavh4taecvddu25u79ebje;
 
-alter table item_equipment_slot
-    add constraint FKbaoixndgp4ivk11dv738sf274
-        foreign key (item_item_id) references item (item_id)
+alter table game_item_equipment_slot
+    add constraint FKfdtxavh4taecvddu25u79ebje
+        foreign key (game_item_item_id) references game_item (item_id)
             on delete cascade;
 
-alter table item_equipment_slot
-drop foreign key FKli98rjngh1twawcfvaut3uy9e;
+alter table game_item_equipment_slot
+drop foreign key FKgnixg5bn5326oajlai20jao6r;
 
-alter table item_equipment_slot
-    add constraint FKli98rjngh1twawcfvaut3uy9e
+alter table game_item_equipment_slot
+    add constraint FKgnixg5bn5326oajlai20jao6r
         foreign key (equipment_slot_equipment_slot_id) references equipment_slot (equipment_slot_id)
             on update cascade on delete cascade;
 
-alter table item_equipment_slot
-drop foreign key FKbaoixndgp4ivk11dv738sf274;
+alter table game_item_equipment_slot
+drop foreign key FKfdtxavh4taecvddu25u79ebje;
 
-alter table item_equipment_slot
-    add constraint FKbaoixndgp4ivk11dv738sf274
-        foreign key (item_item_id) references item (item_id)
+alter table game_item_equipment_slot
+    add constraint FKfdtxavh4taecvddu25u79ebje
+        foreign key (game_item_item_id) references game_item (item_id)
             on update cascade on delete cascade;
 
-alter table item_equipment_slot
-drop foreign key FKli98rjngh1twawcfvaut3uy9e;
+alter table game_item_equipment_slot
+drop foreign key FKgnixg5bn5326oajlai20jao6r;
 
-alter table item_equipment_slot
-    add constraint FKli98rjngh1twawcfvaut3uy9e
+alter table game_item_equipment_slot
+    add constraint FKgnixg5bn5326oajlai20jao6r
         foreign key (equipment_slot_equipment_slot_id) references equipment_slot (equipment_slot_id)
             on update cascade on delete cascade;
 alter table session_character
@@ -223,11 +223,11 @@ alter table inventory
         foreign key (game_session_game_session_id) references game_session (game_session_id)
             on update cascade on delete cascade;
 alter table inventory
-drop foreign key FKbxsjom23hiq3is3ludy092ydq;
+drop foreign key FKmqj87t4om0fr9d9vuy3626wdt;
 
 alter table inventory
-    add constraint FKbxsjom23hiq3is3ludy092ydq
-        foreign key (item_item_id) references item (item_id)
+    add constraint FKmqj87t4om0fr9d9vuy3626wdt
+        foreign key (game_item_item_id) references game_item (item_id)
             on delete set null;
 
 alter table inventory
@@ -239,11 +239,11 @@ alter table inventory
             on update cascade on delete cascade;
 
 alter table inventory
-drop foreign key FKbxsjom23hiq3is3ludy092ydq;
+drop foreign key FKmqj87t4om0fr9d9vuy3626wdt;
 
 alter table inventory
-    add constraint FKbxsjom23hiq3is3ludy092ydq
-        foreign key (item_item_id) references item (item_id)
+    add constraint FKmqj87t4om0fr9d9vuy3626wdt
+        foreign key (game_item_item_id) references game_item (item_id)
             on update cascade on delete set null;
 
 alter table inventory

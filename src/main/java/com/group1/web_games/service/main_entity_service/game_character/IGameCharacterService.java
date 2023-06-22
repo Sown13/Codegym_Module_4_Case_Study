@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface IGameCharacterService extends IGeneralService<GameCharacter> {
     public List<GameCharacter> createPartyOf4();
+    public void deleteCharacterEquipmentSlotRelatedToThisCharacter(Long id);
 }

@@ -64,6 +64,10 @@ public class GameCharacterService implements IGameCharacterService {
         }
         characterEquipmentSlotRepo.saveAll(characterEquipmentSlotList);
         return characterList;
+    }
 
+    @Override
+    public void deleteCharacterEquipmentSlotRelatedToThisCharacter(Long id) {
+        gameCharacterRepo.deleteCharacterEquipmentSlotByCharacterId(id);
     }
 }
