@@ -20,4 +20,8 @@ public class CharacterEquipmentSlot {
     @ManyToOne
     private GameCharacter gameCharacter;
 
+    public CharacterEquipmentSlot(EquipmentSlot equipmentSlot, GameCharacter gameCharacter) {
+        this.equipmentSlot = equipmentSlot;
+        this.gameCharacter = gameCharacter;
+    }
 }

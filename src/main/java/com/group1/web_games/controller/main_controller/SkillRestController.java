@@ -1,7 +1,6 @@
 package com.group1.web_games.controller.main_controller;
 
 import com.group1.web_games.model.main_entity.Skill;
-import com.group1.web_games.model.main_entity.UserEntity;
 import com.group1.web_games.service.skill.ISkillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,7 +12,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/skill")
-public class SkillController {
+public class SkillRestController {
     @Autowired
     private ISkillService skillService;
     @PostMapping

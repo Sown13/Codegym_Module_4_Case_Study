@@ -12,7 +12,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/character-detail-controller")
-public class CharacterDetailController {
+public class CharacterDetailRestController {
     @Autowired
     private ICharacterDetailService characterDetailService;
     @PostMapping

@@ -1,8 +1,6 @@
 package com.group1.web_games.controller.intermediate;
 
-import com.group1.web_games.model.intermediate.CharacterItem;
 import com.group1.web_games.model.intermediate.CharacterSkill;
-import com.group1.web_games.repo.intermediate_repo.ICharacterSkillRepo;
 import com.group1.web_games.service.character_skill.ICharacterSkillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,7 +12,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/character-skill")
-public class CharacterSkillController {
+public class CharacterSkillRestController {
     @Autowired
     private ICharacterSkillService characterSkillService;
     @PostMapping

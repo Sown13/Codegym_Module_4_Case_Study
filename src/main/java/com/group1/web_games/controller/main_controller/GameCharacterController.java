@@ -1,14 +1,12 @@
 package com.group1.web_games.controller.main_controller;
-
-import com.group1.web_games.model.main_entity.EquipmentSlot;
 import com.group1.web_games.model.main_entity.GameCharacter;
 import com.group1.web_games.service.game_character.IGameCharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -21,6 +19,11 @@ public class GameCharacterController {
     private ResponseEntity<GameCharacter>saveGameCharacter(@RequestBody GameCharacter gameCharacter){
         return new ResponseEntity<>(gameCharacterService.save(gameCharacter), HttpStatus.OK);
     }
+    @PostMapping("/test")
+    private ResponseEntity<List<GameCharacter>>createPartyOf4(){
+        return new ResponseEntity<>(gameCharacterService.createPartyOf4(),HttpStatus.OK);
+    }
+
     @GetMapping
     private ResponseEntity<Iterable<GameCharacter>>findAllGameCharacter(){
         return new ResponseEntity<>(gameCharacterService.findAll(),HttpStatus.OK);

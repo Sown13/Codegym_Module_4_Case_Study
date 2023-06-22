@@ -2,6 +2,7 @@ package com.group1.web_games.service.session_character;
 
 import com.group1.web_games.model.intermediate.SessionCharacter;
 import com.group1.web_games.repo.intermediate_repo.ISessionCharacterRepo;
+import com.group1.web_games.service.game_character.IGameCharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +31,5 @@ public class SessionCharacterService implements ISessionCharacterService {
     @Override
     public void remove(Long id) {
         sessionCharacterRepo.deleteById(id);
-
     }
 }

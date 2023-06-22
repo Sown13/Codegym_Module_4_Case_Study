@@ -25,4 +25,19 @@ public class GameCharacter {
     private int skillPoint;
     private String characterImage;
     private boolean alive;
+
+    public GameCharacter(String characterName, int characterLevel, int characterExp, String characterType, int characterStr, int characterInt, int characterVit, int characterMind, int statPoint, int skillPoint, String characterImage, boolean alive) {
+        this.characterName = characterName;
+        this.characterLevel = characterLevel;
+        this.characterExp = characterExp;
+        this.characterType = characterType;
+        this.characterStr = characterStr;
+        this.characterInt = characterInt;
+        this.characterVit = characterVit;
+        this.characterMind = characterMind;
+        this.statPoint = statPoint;
+        this.skillPoint = skillPoint;
+        this.characterImage = characterImage;
+        this.alive = alive;
+    }
 }

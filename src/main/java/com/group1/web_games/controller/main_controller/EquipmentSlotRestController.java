@@ -13,7 +13,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/equipment-slot")
-public class EquipmentSlotController {
+public class EquipmentSlotRestController {
     @Qualifier("equipmentSlotService")
     @Autowired
     private IEquipmentSlotSer equipmentSlotSer;

@@ -19,4 +19,9 @@ public class SessionCharacter {
     private GameSession gameSession;
     @ManyToOne
     private GameCharacter gameCharacter;
+
+    public SessionCharacter(GameSession gameSession, GameCharacter gameCharacter) {
+        this.gameSession = gameSession;
+        this.gameCharacter = gameCharacter;
+    }
 }

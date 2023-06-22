@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("game-session")
+@RequestMapping("/game-session")
 public class GameSessionController {
     @Autowired
     private IGameSessionService gameSessionService;

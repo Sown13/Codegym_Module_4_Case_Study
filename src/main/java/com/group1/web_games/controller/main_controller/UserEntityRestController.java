@@ -1,6 +1,5 @@
 package com.group1.web_games.controller.main_controller;
 
-import com.group1.web_games.model.main_entity.GameSession;
 import com.group1.web_games.model.main_entity.UserEntity;
 import com.group1.web_games.service.user_entity.IUserEntityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/user-entity")
-public class UserEntityController {
+public class UserEntityRestController {
     @Autowired
     private IUserEntityService userEntityService;
     @PostMapping
