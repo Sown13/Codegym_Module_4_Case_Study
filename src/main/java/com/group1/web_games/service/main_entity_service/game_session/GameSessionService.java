@@ -5,8 +5,6 @@ import com.group1.web_games.model.main_entity.GameCharacter;
 import com.group1.web_games.model.main_entity.GameSession;
 import com.group1.web_games.repo.intermediate_repo.ISessionCharacterRepo;
 import com.group1.web_games.repo.main_entity_repo.IGameSessionRepo;
-import com.group1.web_games.service.game_character.IGameCharacterService;
-import com.group1.web_games.service.inventory.IInventoryService;
 import com.group1.web_games.service.main_entity_service.game_character.IGameCharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,8 +17,6 @@ import java.util.Optional;
 public class GameSessionService implements IGameSessionService {
     @Autowired
     private IGameSessionRepo gameSessionRepo;
-    @Autowired
-     private IInventoryService inventoryService;
     @Autowired
     private ISessionCharacterRepo sessionCharacterRepo;
     @Autowired
@@ -45,7 +41,7 @@ public class GameSessionService implements IGameSessionService {
             sessionCharacterList.add(new SessionCharacter(gameSession, gameCharacter));
         }
         sessionCharacterRepo.saveAll(sessionCharacterList);
-        inventoryService.init20Inventory(gameSession);
+
         return gameSession;
     }
 
