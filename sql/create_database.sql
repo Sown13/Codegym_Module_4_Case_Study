@@ -1,0 +1,1 @@
+CREATE DATABASE case_study_web_game;

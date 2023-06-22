@@ -2,7 +2,7 @@ package com.group1.web_games.controller.main_controller;
 
 
 import com.group1.web_games.model.main_entity.GameItem;
-import com.group1.web_games.service.game_item.IGameItemService;
+import com.group1.web_games.service.main_entity_service.game_item.IGameItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

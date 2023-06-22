@@ -1,6 +1,6 @@
 package com.group1.web_games.controller.intermediate;
 import com.group1.web_games.model.intermediate.Inventory;
-import com.group1.web_games.service.inventory.IInventoryService;
+import com.group1.web_games.service.intermediate_service.inventory.IInventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

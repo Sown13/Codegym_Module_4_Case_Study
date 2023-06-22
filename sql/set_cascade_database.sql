@@ -1,3 +1,4 @@
+USE case_study_web_game;
 alter table character_equipment_slot
 drop foreign key FKfc31q0svfh33s7ujl0g39db7g;
 

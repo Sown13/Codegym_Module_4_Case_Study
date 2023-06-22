@@ -1,7 +1,7 @@
 package com.group1.web_games.controller.intermediate;
 
 import com.group1.web_games.model.intermediate.CharacterSkill;
-import com.group1.web_games.service.character_skill.ICharacterSkillService;
+import com.group1.web_games.service.intermediate_service.character_skill.ICharacterSkillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

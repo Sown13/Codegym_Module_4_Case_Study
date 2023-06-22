@@ -1,7 +1,7 @@
 package com.group1.web_games.controller.main_controller;
 
 import com.group1.web_games.model.main_entity.EquipmentSlot;
-import com.group1.web_games.service.equipment_slot.IEquipmentSlotSer;
+import com.group1.web_games.service.main_entity_service.equipment_slot.IEquipmentSlotSer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;

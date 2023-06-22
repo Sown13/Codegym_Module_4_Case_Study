@@ -1,7 +1,7 @@
 package com.group1.web_games.controller.main_controller;
 
 import com.group1.web_games.model.main_entity.UserEntity;
-import com.group1.web_games.service.user_entity.IUserEntityService;
+import com.group1.web_games.service.main_entity_service.user_entity.IUserEntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
