@@ -20,4 +20,9 @@ public class Inventory {
     @ManyToOne
     private GameItem gameItem;
     private String inventoryImage;
+
+
+    public Inventory(GameSession gameSession) {
+        this.gameSession = gameSession;
+    }
 }
