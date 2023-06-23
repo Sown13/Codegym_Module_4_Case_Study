@@ -1,4 +1,4 @@
-package com.group1.web_games.model.main_entity;
+package com.group1.web_games.model.not_now;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

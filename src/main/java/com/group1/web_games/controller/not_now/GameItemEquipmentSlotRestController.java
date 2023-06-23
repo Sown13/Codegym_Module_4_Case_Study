@@ -1,6 +1,6 @@
-package com.group1.web_games.controller.intermediate;
-import com.group1.web_games.model.intermediate.GameItemEquipmentSlot;
-import com.group1.web_games.service.intermediate_service.game_item_equipment_slot.IGameItemEquipmentSlotService;
+package com.group1.web_games.controller.not_now;
+import com.group1.web_games.model.not_now.GameItemEquipmentSlot;
+import com.group1.web_games.service.not_now.game_item_equipment_slot.IGameItemEquipmentSlotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

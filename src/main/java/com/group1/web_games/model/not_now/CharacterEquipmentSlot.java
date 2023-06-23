@@ -1,7 +1,6 @@
-package com.group1.web_games.model.intermediate;
+package com.group1.web_games.model.not_now;
 
 import com.group1.web_games.model.main_entity.GameCharacter;
-import com.group1.web_games.model.main_entity.EquipmentSlot;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

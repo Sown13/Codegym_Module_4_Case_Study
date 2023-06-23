@@ -11,7 +11,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/game-session")
-public class GameSessionController {
+public class GameSessionRestController {
     @Autowired
     private IGameSessionService gameSessionService;
     @PostMapping

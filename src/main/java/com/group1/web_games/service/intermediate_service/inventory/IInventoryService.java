@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface IInventoryService extends IGeneralService<Inventory>{
     public List<Inventory> init20Inventory(GameSession gameSession);
+
 }

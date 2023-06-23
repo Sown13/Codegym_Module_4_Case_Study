@@ -11,13 +11,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class InventoryService implements IInventoryService{
+public class InventoryService implements IInventoryService {
     @Autowired
     private IInventoryRepo iInventoryRepo;
 
     @Override
     public Iterable<Inventory> findAll() {
-         return iInventoryRepo.findAll();
+        return iInventoryRepo.findAll();
     }
 
     @Override
@@ -35,12 +35,15 @@ public class InventoryService implements IInventoryService{
         iInventoryRepo.deleteById(id);
 
     }
+
     @Override
-    public List<Inventory> init20Inventory(GameSession gameSession){
-        List<Inventory>inventoryList=new ArrayList<>(20);
+    public List<Inventory> init20Inventory(GameSession gameSession) {
+        List<Inventory> inventoryList = new ArrayList<>(20);
         for (int i = 0; i < 20; i++) {
             inventoryList.add(new Inventory(gameSession));
         }
         return inventoryList;
     }
+
+
 }

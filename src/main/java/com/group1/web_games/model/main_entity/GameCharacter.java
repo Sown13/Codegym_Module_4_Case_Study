@@ -27,7 +27,7 @@ public class GameCharacter {
     private boolean isAlive;
     private boolean isEnemy;
 
-    public GameCharacter(String characterName, int characterLevel, int characterExp, String characterType, int characterStr, int characterInt, int characterVit, int characterMind, int statPoint, int skillPoint, String characterImage, boolean isAlive) {
+    public GameCharacter(String characterName, int characterLevel, int characterExp, String characterType, int characterStr, int characterInt, int characterVit, int characterMind, int statPoint, int skillPoint, String characterImage, boolean isAlive,boolean isEnemy) {
         this.characterName = characterName;
         this.characterLevel = characterLevel;
         this.characterExp = characterExp;
@@ -40,5 +40,6 @@ public class GameCharacter {
         this.skillPoint = skillPoint;
         this.characterImage = characterImage;
         this.isAlive = isAlive;
+        this.isEnemy = isEnemy;
     }
 }

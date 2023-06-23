@@ -1,9 +1,6 @@
 package com.group1.web_games.model.main_entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,8 +16,19 @@ public class Skill {
     private String skillName;
     private String skillType;
     private String skillSpecial;
-    private String skillCost;
+    private int skillCost;
     private int skillLevel;
     private String skillImage;
+    @ManyToOne
+    private GameCharacter gameCharacter;
 
+    public Skill(String skillName, String skillType, String skillSpecial, int skillCost, int skillLevel, String skillImage, GameCharacter gameCharacter) {
+        this.skillName = skillName;
+        this.skillType = skillType;
+        this.skillSpecial = skillSpecial;
+        this.skillCost = skillCost;
+        this.skillLevel = skillLevel;
+        this.skillImage = skillImage;
+        this.gameCharacter = gameCharacter;
+    }
 }

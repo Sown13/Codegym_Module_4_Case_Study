@@ -19,4 +19,8 @@ public class CharacterItem {
     private GameItem gameItem;
     @ManyToOne
     private GameCharacter gameCharacter;
+
+    public CharacterItem(GameCharacter gameCharacter) {
+        this.gameCharacter = gameCharacter;
+    }
 }

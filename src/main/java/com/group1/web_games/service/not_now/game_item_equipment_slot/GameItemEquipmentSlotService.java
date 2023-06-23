@@ -1,7 +1,7 @@
-package com.group1.web_games.service.intermediate_service.game_item_equipment_slot;
+package com.group1.web_games.service.not_now.game_item_equipment_slot;
 
-import com.group1.web_games.model.intermediate.GameItemEquipmentSlot;
-import com.group1.web_games.repo.intermediate_repo.IGameItemEquipmentSlotRepo;
+import com.group1.web_games.model.not_now.GameItemEquipmentSlot;
+import com.group1.web_games.repo.not_now.IGameItemEquipmentSlotRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

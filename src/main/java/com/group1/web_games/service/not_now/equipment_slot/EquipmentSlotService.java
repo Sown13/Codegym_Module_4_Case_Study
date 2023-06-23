@@ -1,7 +1,7 @@
-package com.group1.web_games.service.main_entity_service.equipment_slot;
+package com.group1.web_games.service.not_now.equipment_slot;
 
-import com.group1.web_games.model.main_entity.EquipmentSlot;
-import com.group1.web_games.repo.main_entity_repo.IEquipmentSlotRepo;
+import com.group1.web_games.model.not_now.EquipmentSlot;
+import com.group1.web_games.repo.not_now.IEquipmentSlotRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

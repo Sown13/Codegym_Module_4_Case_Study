@@ -7,6 +7,10 @@ import java.util.List;
 
 
 public interface IGameCharacterService extends IGeneralService<GameCharacter> {
-    public List<GameCharacter> createPartyOf4();
-    public void deleteCharacterEquipmentSlotRelatedToThisCharacter(Long id);
+    List<GameCharacter> createPartyOf4();
+    List<GameCharacter> createEnemies();
+    void deleteCharacterEquipmentSlotRelatedToThisCharacter(Long id);
+
+//    List<GameCharacter> showPartyBySession(Long gameSessionId);
+
 }
