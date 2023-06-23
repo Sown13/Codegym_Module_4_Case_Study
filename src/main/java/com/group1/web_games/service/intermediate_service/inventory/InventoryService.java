@@ -42,6 +42,7 @@ public class InventoryService implements IInventoryService {
         for (int i = 0; i < 20; i++) {
             inventoryList.add(new Inventory(gameSession));
         }
+        iInventoryRepo.saveAll(inventoryList);
         return inventoryList;
     }
 
