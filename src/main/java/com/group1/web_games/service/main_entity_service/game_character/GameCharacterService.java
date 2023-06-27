@@ -95,10 +95,10 @@ public class GameCharacterService implements IGameCharacterService {
     @Override
     public List<GameCharacter> createEnemies() {
         List<GameCharacter> enemyList = new ArrayList<>();
-        GameCharacter enemy1 = new GameCharacter("Huế", 4, 0, "playable", 5, 10, 10, 10, 0, 0, "thêm sau", true, true);
-        GameCharacter enemy2 = new GameCharacter("Diệp", 6, 0, "playable", 20, 10, 10, 10, 0, 0, "thêm sau", true, true);
-        GameCharacter enemy3 = new GameCharacter("Ngũ", 8, 0, "playable", 10, 20, 5, 15, 0, 0, "thêm sau", true, true);
-        GameCharacter enemy4 = new GameCharacter("Duyên Âm", 10, 0, "playable", 15, 15, 15, 15, 15, 15, "thêm sau", true, true);
+        GameCharacter enemy1 = new GameCharacter("Huế", 4, 0, "enemy", 5, 10, 10, 10, 0, 0, "thêm sau", true, true);
+        GameCharacter enemy2 = new GameCharacter("Diệp", 6, 0, "enemy", 20, 10, 10, 10, 0, 0, "thêm sau", true, true);
+        GameCharacter enemy3 = new GameCharacter("Ngũ", 8, 0, "enemy", 10, 20, 5, 15, 0, 0, "thêm sau", true, true);
+        GameCharacter enemy4 = new GameCharacter("Duyên Âm", 10, 0, "enemy", 15, 15, 15, 15, 15, 15, "thêm sau", true, true);
         enemyList.add(enemy1);
         enemyList.add(enemy2);
         enemyList.add(enemy3);
