@@ -35,4 +35,20 @@ out/
 
 ### VS Code ###
 .vscode/
+<<<<<<< HEAD
+<<<<<<< HEAD
 /rootpassword.env
+=======
+=======
+>>>>>>> tuong
+
+
+
+/tuong.env
+<<<<<<< HEAD
+>>>>>>> tuong
+=======
+=======
+/rootpassword.env
+>>>>>>> 8fe49207841f465d03312e5ce4394ff7775ab298
+>>>>>>> tuong

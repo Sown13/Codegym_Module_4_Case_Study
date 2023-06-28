@@ -1,5 +1,6 @@
 package com.group1.web_games.model.main_entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,5 +21,6 @@ public class CharacterDetail {
     private int magicAtk;
     private int magicDef;
     @OneToOne
+//    @PrimaryKeyJoinColumn(name = "character_id")
     private GameCharacter gameCharacter;
 }

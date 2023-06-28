@@ -24,6 +24,7 @@ public class GameCharacter {
     private int statPoint;
     private int skillPoint;
     private String characterImage;
+    @Column(name = "is_alive")
     private boolean isAlive;
     private boolean isEnemy;
 
