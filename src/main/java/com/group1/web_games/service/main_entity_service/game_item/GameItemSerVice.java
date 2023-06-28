@@ -33,4 +33,9 @@ public class GameItemSerVice implements IGameItemService {
         gameItemRepo.deleteById(id);
     }
 
+    @Override
+    public List<GameItem> getItemListByGameSession(Long gameSessionId) {
+        return gameItemRepo.findItemByGameSession(gameSessionId);
+    }
+
 }

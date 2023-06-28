@@ -17,14 +17,19 @@ public class GameItemRestController {
 
     @Autowired
     private IGameItemService gameItemService;
-    @PostMapping
-    private ResponseEntity<GameItem> saveGameItem(@RequestBody GameItem gameItem){
-        return new ResponseEntity<>(gameItemService.save(gameItem), HttpStatus.OK);
-    }
     @GetMapping
     private ResponseEntity<Iterable<GameItem>>findAllGameItem(){
         return new ResponseEntity<>(gameItemService.findAll(),HttpStatus.OK);
     }
+    @GetMapping("/game-session/{gameSessionId}")
+    private ResponseEntity<Iterable<GameItem>>findGameItemBySession(@PathVariable Long gameSessionId){
+        return new ResponseEntity<>(gameItemService.getItemListByGameSession(gameSessionId),HttpStatus.OK);
+    }
+    @PostMapping
+    private ResponseEntity<GameItem> saveGameItem(@RequestBody GameItem gameItem){
+        return new ResponseEntity<>(gameItemService.save(gameItem), HttpStatus.OK);
+    }
+
     @DeleteMapping("{id}")
     private ResponseEntity<GameItem>deleteGameItem(@PathVariable Long id){
         Optional<GameItem> gameItem=gameItemService.findById(id);

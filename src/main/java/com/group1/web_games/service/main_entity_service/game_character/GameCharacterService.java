@@ -80,12 +80,12 @@ public class GameCharacterService implements IGameCharacterService {
 
         List<Skill> skillList = new ArrayList<>();
         for (var i = 0; i < characterList.size(); i++) {
-            skillList.add(new Skill("Đánh thường", "PHYS", "none", 0, 1, "none", characterList.get(i)));
-            skillList.add(new Skill("Nộ long cước", "PHYS", "none", 5, 1, "none", characterList.get(i)));
-            skillList.add(new Skill("Khóa ánh sáng", "MAGIC", "none", 5, 1, "none", characterList.get(i)));
-            skillList.add(new Skill("Cầu vồng tối thượng", "MAGIC", "none", 5, 1, "none", characterList.get(i)));
-            skillList.add(new Skill("Khiên đen", "BUFF", "none", 5, 1, "none", characterList.get(i)));
-            skillList.add(new Skill("Hồi máu đến chết", "BUFF", "none", 5, 1, "none", characterList.get(i)));
+            skillList.add(new Skill("Đánh thường", "PHYS", "none", 0, 1, "../img/skill/skill-1.webp", characterList.get(i)));
+            skillList.add(new Skill("Nộ long cước", "PHYS", "none", 5, 1, "../img/skill/skill-2.webp", characterList.get(i)));
+            skillList.add(new Skill("Khóa ánh sáng", "MAGIC", "none", 5, 1, "../img/skill/skill-3.webp", characterList.get(i)));
+            skillList.add(new Skill("Cầu vồng tối thượng", "MAGIC", "none", 5, 1, "../img/skill/skill-4.webp", characterList.get(i)));
+            skillList.add(new Skill("Khiên đen", "BUFF", "none", 5, 1, "../img/skill/skill-5.webp", characterList.get(i)));
+            skillList.add(new Skill("Hồi máu đến chết", "BUFF", "none", 5, 1, "../img/skill/skill-6.webp", characterList.get(i)));
         }
         skillRepo.saveAll(skillList);
 
