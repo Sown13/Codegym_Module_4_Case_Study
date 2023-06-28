@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class UserEntityService implements IUserEntityService{
+public class UserEntityService implements IUserEntityService {
     @Autowired
     private IUserEntityRepo userEntityRepo;
 
@@ -30,5 +30,10 @@ public class UserEntityService implements IUserEntityService{
     @Override
     public void remove(Long id) {
         userEntityRepo.deleteById(id);
+    }
+
+    @Override
+    public UserEntity findByUserEmail(String email) {
+        return userEntityRepo.findByUserEmail(email);
     }
 }
