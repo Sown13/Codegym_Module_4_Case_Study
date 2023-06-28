@@ -3,6 +3,8 @@ package com.group1.web_games.service.intermediate_service.inventory;
 import com.group1.web_games.model.intermediate.Inventory;
 import com.group1.web_games.model.main_entity.GameSession;
 import com.group1.web_games.repo.intermediate_repo.IInventoryRepo;
+import com.group1.web_games.repo.main_entity_repo.IGameSessionRepo;
+import com.group1.web_games.service.main_entity_service.game_session.IGameSessionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,26 +15,28 @@ import java.util.Optional;
 @Service
 public class InventoryService implements IInventoryService {
     @Autowired
-    private IInventoryRepo iInventoryRepo;
+    private IInventoryRepo inventoryRepo;
+    @Autowired
+    private IGameSessionRepo gameSessionRepo;
 
     @Override
     public Iterable<Inventory> findAll() {
-        return iInventoryRepo.findAll();
+        return inventoryRepo.findAll();
     }
 
     @Override
     public Optional<Inventory> findById(Long id) {
-        return iInventoryRepo.findById(id);
+        return inventoryRepo.findById(id);
     }
 
     @Override
     public Inventory save(Inventory inventory) {
-        return iInventoryRepo.save(inventory);
+        return inventoryRepo.save(inventory);
     }
 
     @Override
     public void remove(Long id) {
-        iInventoryRepo.deleteById(id);
+        inventoryRepo.deleteById(id);
 
     }
 
@@ -42,9 +46,13 @@ public class InventoryService implements IInventoryService {
         for (int i = 0; i < 20; i++) {
             inventoryList.add(new Inventory(gameSession));
         }
-        iInventoryRepo.saveAll(inventoryList);
+        inventoryRepo.saveAll(inventoryList);
         return inventoryList;
     }
 
-
+    @Override
+    public List<Inventory> findInventoryByGameSessionId(Long gameSessionId) {
+        GameSession gameSession = gameSessionRepo.findById(gameSessionId).orElse(null);
+        return inventoryRepo.findInventoryByGameSession(gameSession);
+    }
 }

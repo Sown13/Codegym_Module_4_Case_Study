@@ -13,4 +13,11 @@ public interface IGameCharacterService extends IGeneralService<GameCharacter> {
 
 //    List<GameCharacter> showPartyBySession(Long gameSessionId);
 
+    List<GameCharacter> findListAlivePlayerBySessionId(Long gameSessionId);
+    List<GameCharacter> findListDeadPlayerBySessionId(Long gameSessionId);
+    List<GameCharacter> findListAliveEnemyBySessionId(Long gameSessionId);
+    List<GameCharacter> findListDeadEnemyBySessionId(Long gameSessionId);
+
+
+
 }

@@ -124,4 +124,25 @@ public class GameCharacterService implements IGameCharacterService {
 //    public List<GameCharacter> showPartyBySession(Long gameSessionId) {
 //       return gameCharacterRepo.showPartyBySession(gameSessionId);
 //    }
+
+
+    @Override
+    public List<GameCharacter> findListAlivePlayerBySessionId(Long gameSessionId) {
+        return gameCharacterRepo.findAliveGameCharacterBySessionId(gameSessionId);
+    }
+
+    @Override
+    public List<GameCharacter> findListDeadPlayerBySessionId(Long gameSessionId) {
+        return gameCharacterRepo.findDeadGameCharacterBySessionId(gameSessionId);
+    }
+
+    @Override
+    public List<GameCharacter> findListAliveEnemyBySessionId(Long gameSessionId) {
+        return gameCharacterRepo.findAliveEnemyBySessionId(gameSessionId);
+    }
+
+    @Override
+    public List<GameCharacter> findListDeadEnemyBySessionId(Long gameSessionId) {
+        return gameCharacterRepo.findDeadEnemyBySessionId(gameSessionId);
+    }
 }

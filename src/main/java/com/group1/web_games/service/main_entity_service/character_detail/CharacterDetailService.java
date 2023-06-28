@@ -5,6 +5,7 @@ import com.group1.web_games.repo.main_entity_repo.ICharacterDetailRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 @Service
 public class CharacterDetailService implements ICharacterDetailService {
@@ -29,5 +30,25 @@ public class CharacterDetailService implements ICharacterDetailService {
     @Override
     public void remove(Long id) {
         characterDetailRepo.deleteById(id);
+    }
+
+    @Override
+    public List<CharacterDetail> findListAlivePlayerDetailBySessionId(Long gameSessionId) {
+        return characterDetailRepo.findAlivePlayerDetailBySessionId(gameSessionId);
+    }
+
+    @Override
+    public List<CharacterDetail> findListDeadPlayerDetailBySessionId(Long gameSessionId) {
+        return characterDetailRepo.findDeadPlayerDetailBySessionId(gameSessionId);
+    }
+
+    @Override
+    public List<CharacterDetail> findListAliveEnemyDetailBySessionId(Long gameSessionId) {
+        return characterDetailRepo.findAliveEnemyDetailBySessionId(gameSessionId);
+    }
+
+    @Override
+    public List<CharacterDetail> findListDeadEnemyDetailBySessionId(Long gameSessionId) {
+        return characterDetailRepo.findDeadEnemyDetailBySessionId(gameSessionId);
     }
 }

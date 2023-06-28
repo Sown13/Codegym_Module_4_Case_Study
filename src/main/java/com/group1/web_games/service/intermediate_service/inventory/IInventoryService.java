@@ -7,6 +7,7 @@ import com.group1.web_games.service.IGeneralService;
 import java.util.List;
 
 public interface IInventoryService extends IGeneralService<Inventory>{
-    public List<Inventory> init20Inventory(GameSession gameSession);
+    List<Inventory> init20Inventory(GameSession gameSession);
 
+    List<Inventory> findInventoryByGameSessionId(Long id);
 }
