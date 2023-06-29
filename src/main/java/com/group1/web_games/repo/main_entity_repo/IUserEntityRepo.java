@@ -6,12 +6,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IUserEntityRepo extends JpaRepository<UserEntity,Long> {
-    @Query(value = "select u from UserEntity as u where u.email = :email")
-    UserEntity findByUserEmail(String email);
-
-
-
+public interface IUserEntityRepo extends JpaRepository<UserEntity, Long> {
+    @Query(value = "select u from UserEntity as u where u.accountName = :accountName")
+    UserEntity findByUserEmail(String accountName);
 
 
 }
