@@ -1,6 +1,7 @@
 package com.group1.web_games.repo.main_entity_repo;
 
 import com.group1.web_games.model.main_entity.CharacterDetail;
+import com.group1.web_games.model.main_entity.GameCharacter;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -27,4 +28,5 @@ public interface ICharacterDetailRepo extends JpaRepository<CharacterDetail, Lon
     @Query("SELECT cs FROM CharacterDetail cs JOIN GameCharacter gc on cs.gameCharacter.characterId = gc.characterId JOIN SessionCharacter sc on gc.characterId = sc.gameCharacter.characterId JOIN GameSession gs on gs.gameSessionId = sc.gameSession.gameSessionId WHERE gc.isAlive = false AND gc.isEnemy = true AND gs.gameSessionId = :gameSessionId")
     List<CharacterDetail> findDeadEnemyDetailBySessionId(@Param("gameSessionId") Long gameSessionId);
 
+    CharacterDetail findCharacterDetailByGameCharacter(GameCharacter gameCharacter);
 }

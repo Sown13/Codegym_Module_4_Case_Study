@@ -22,6 +22,10 @@ public class GameSessionRestController {
     private ResponseEntity<Iterable<GameSession>>findAllGameSession(){
         return new ResponseEntity<>(gameSessionService.findAll(),HttpStatus.OK);
     }
+    @GetMapping("/user/{userId}")
+    private ResponseEntity<Iterable<GameSession>>findAllByUserId(@PathVariable Long userId){
+        return new ResponseEntity<>(gameSessionService.findGameSessionByUserId(userId),HttpStatus.OK);
+    }
     @DeleteMapping("{id}")
     private ResponseEntity<GameSession>deleteGameSession(@PathVariable Long id){
         Optional<GameSession> gameSession=gameSessionService.findById(id);

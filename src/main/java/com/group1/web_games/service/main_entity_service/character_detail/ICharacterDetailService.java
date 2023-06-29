@@ -11,4 +11,6 @@ public interface ICharacterDetailService extends IGeneralService<CharacterDetail
     List<CharacterDetail> findListDeadPlayerDetailBySessionId(Long gameSessionId);
     List<CharacterDetail> findListAliveEnemyDetailBySessionId(Long gameSessionId);
     List<CharacterDetail> findListDeadEnemyDetailBySessionId(Long gameSessionId);
+
+    CharacterDetail findCharacterDetailByGameCharacterId(Long id);
 }

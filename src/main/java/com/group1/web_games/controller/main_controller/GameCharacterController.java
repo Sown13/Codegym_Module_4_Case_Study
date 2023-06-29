@@ -22,7 +22,10 @@ public class GameCharacterController {
     private ResponseEntity<Iterable<GameCharacter>> findAllGameCharacter() {
         return new ResponseEntity<>(gameCharacterService.findAll(), HttpStatus.OK);
     }
-
+    @GetMapping("{characterId}")
+    private ResponseEntity<GameCharacter> findCharacterById(@PathVariable Long characterId) {
+        return new ResponseEntity<>(gameCharacterService.findById(characterId).orElse(null), HttpStatus.OK);
+    }
     @GetMapping("/player-list-alive/{gameSessionId}")
     private ResponseEntity<List<GameCharacter>> findAliveGameCharacterBySessionID(@PathVariable Long gameSessionId) {
         return new ResponseEntity<>(gameCharacterService.findListAlivePlayerBySessionId(gameSessionId), HttpStatus.OK);

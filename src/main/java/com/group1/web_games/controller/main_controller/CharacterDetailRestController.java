@@ -21,6 +21,11 @@ public class CharacterDetailRestController {
     private ResponseEntity<Iterable<CharacterDetail>>findAllCharacterDetail(){
         return new ResponseEntity<>(characterDetailService.findAll(),HttpStatus.OK);
     }
+
+    @GetMapping("/game-character/{gameCharacterId}")
+    private ResponseEntity<CharacterDetail>findGameCharacterDetailByCharacterId(@PathVariable Long gameCharacterId){
+        return new ResponseEntity<>(characterDetailService.findCharacterDetailByGameCharacterId(gameCharacterId),HttpStatus.OK);
+    }
     @GetMapping("/player-list-alive/{gameSessionId}")
     private ResponseEntity<List<CharacterDetail>> findAliveGameCharacterBySessionID(@PathVariable Long gameSessionId) {
         return new ResponseEntity<>(characterDetailService.findListAlivePlayerDetailBySessionId(gameSessionId), HttpStatus.OK);

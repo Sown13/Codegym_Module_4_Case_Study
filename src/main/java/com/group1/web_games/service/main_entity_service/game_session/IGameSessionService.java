@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface IGameSessionService extends IGeneralService<GameSession> {
 
+    List<GameSession> findGameSessionByUserId(Long userId);
 }

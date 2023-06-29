@@ -54,10 +54,10 @@ public class GameCharacterService implements IGameCharacterService {
     @Override
     public List<GameCharacter> createPartyOf4() {
         List<GameCharacter> characterList = new ArrayList<>();
-        GameCharacter gameCharacter1 = new GameCharacter("Công Nghiện", 1, 0, "playable", 5, 5, 5, 5, 1, 1, "thêm sau", true, false);
-        GameCharacter gameCharacter2 = new GameCharacter("Tuấn Rau Sạch", 1, 0, "playable", 5, 5, 5, 5, 1, 1, "thêm sau", true, false);
-        GameCharacter gameCharacter3 = new GameCharacter("Hải Quý Bưởi", 1, 0, "playable", 5, 5, 5, 5, 1, 1, "thêm sau", true, false);
-        GameCharacter gameCharacter4 = new GameCharacter("Hùng Barber", 1, 0, "playable", 5, 5, 5, 5, 1, 1, "thêm sau", true, false);
+        GameCharacter gameCharacter1 = new GameCharacter("Công Nghiện", 1, 0, "playable", 5, 5, 5, 5, 1, 1, "../img/character/grave-robber/gr-icon.png", true, false);
+        GameCharacter gameCharacter2 = new GameCharacter("Tuấn Rau Sạch", 1, 0, "playable", 5, 5, 5, 5, 1, 1, "../img/character/vestal/vestal-icon.png", true, false);
+        GameCharacter gameCharacter3 = new GameCharacter("Hải Quý Bưởi", 1, 0, "playable", 5, 5, 5, 5, 1, 1, "../img/character/highwayman/hwm-icon.png", true, false);
+        GameCharacter gameCharacter4 = new GameCharacter("Hùng Barber", 1, 0, "playable", 5, 5, 5, 5, 1, 1, "../img/character/crusader/crusader-icon.png", true, false);
         characterList.add(gameCharacter1);
         characterList.add(gameCharacter2);
         characterList.add(gameCharacter3);

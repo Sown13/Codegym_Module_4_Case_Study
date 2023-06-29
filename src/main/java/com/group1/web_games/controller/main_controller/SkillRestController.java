@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -22,6 +23,14 @@ public class SkillRestController {
     @GetMapping
     private ResponseEntity<Iterable<Skill>>findAllSkill(){
         return new ResponseEntity<>(skillService.findAll(),HttpStatus.OK);
+    }
+    @GetMapping("/game-session/{gameSessionId}")
+    private ResponseEntity<List<Skill>>findSkillByAliveCharacterAndGameSession(@PathVariable("gameSessionId") Long gameSessionId){
+        return new ResponseEntity<>(skillService.findSkillByAliveCharacterAndGameSession(gameSessionId),HttpStatus.OK);
+    }
+    @GetMapping("/game-session/{gameSessionId}/game-character/{characterId}")
+    private ResponseEntity<List<Skill>>findSkillBycharacterIdAndGameSession(@PathVariable("gameSessionId") Long gameSessionId,@PathVariable("characterId") Long characterId){
+        return new ResponseEntity<>(skillService.findSkillBycharacterIdAndGameSession(gameSessionId,characterId),HttpStatus.OK);
     }
     @DeleteMapping("{id}")
     private ResponseEntity<Skill>deleteSkill(@PathVariable Long id){

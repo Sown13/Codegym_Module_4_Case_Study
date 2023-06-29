@@ -1,7 +1,10 @@
 package com.group1.web_games.service.main_entity_service.character_detail;
 
 import com.group1.web_games.model.main_entity.CharacterDetail;
+import com.group1.web_games.model.main_entity.GameCharacter;
 import com.group1.web_games.repo.main_entity_repo.ICharacterDetailRepo;
+import com.group1.web_games.repo.main_entity_repo.IGameCharacterRepo;
+import com.group1.web_games.service.main_entity_service.game_character.IGameCharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +14,8 @@ import java.util.Optional;
 public class CharacterDetailService implements ICharacterDetailService {
     @Autowired
     private ICharacterDetailRepo characterDetailRepo;
+    @Autowired
+    private IGameCharacterRepo gameCharacterRepo;
 
     @Override
     public Iterable<CharacterDetail> findAll() {
@@ -50,5 +55,11 @@ public class CharacterDetailService implements ICharacterDetailService {
     @Override
     public List<CharacterDetail> findListDeadEnemyDetailBySessionId(Long gameSessionId) {
         return characterDetailRepo.findDeadEnemyDetailBySessionId(gameSessionId);
+    }
+
+    @Override
+    public CharacterDetail findCharacterDetailByGameCharacterId(Long id) {
+        GameCharacter gameCharacter = gameCharacterRepo.findById(id).orElse(null);
+        return characterDetailRepo.findCharacterDetailByGameCharacter(gameCharacter);
     }
 }
