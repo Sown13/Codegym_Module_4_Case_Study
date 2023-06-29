@@ -64,4 +64,14 @@ public class GameSessionService implements IGameSessionService {
         UserEntity userEntity = userEntityService.findById(userId).orElse(null);
         return gameSessionRepo.findGameSessionByUserEntity(userEntity);
     }
+
+//    @Override
+//    public Optional<GameSession> findAllByUserId(Long id) {
+//        return gameSessionRepo.findAllByUserId(id);
+//    }
+
+    @Override
+    public List<GameSession> findByUserEntityUserId(Long id) {
+        return gameSessionRepo.findByUserEntityUserId(id);
+    }
 }

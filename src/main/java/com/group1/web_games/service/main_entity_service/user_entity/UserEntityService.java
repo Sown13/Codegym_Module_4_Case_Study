@@ -33,7 +33,7 @@ public class UserEntityService implements IUserEntityService {
     }
 
     @Override
-    public UserEntity findByUserEmail(String email) {
-        return userEntityRepo.findByUserEmail(email);
+    public UserEntity findByUserAccountName(String accountName) {
+        return userEntityRepo.findByUserEmail(accountName);
     }
 }
