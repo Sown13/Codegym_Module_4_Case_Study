@@ -25,6 +25,10 @@ public class GameItemRestController {
     private ResponseEntity<Iterable<GameItem>>findGameItemBySession(@PathVariable Long gameSessionId){
         return new ResponseEntity<>(gameItemService.getItemListByGameSession(gameSessionId),HttpStatus.OK);
     }
+    @GetMapping("{itemId}")
+    private ResponseEntity<GameItem>findGameItemByItemId(@PathVariable Long itemId){
+        return new ResponseEntity<>(gameItemService.findItemByItemId(itemId),HttpStatus.OK);
+    }
     @PostMapping
     private ResponseEntity<GameItem> saveGameItem(@RequestBody GameItem gameItem){
         return new ResponseEntity<>(gameItemService.save(gameItem), HttpStatus.OK);

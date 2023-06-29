@@ -9,4 +9,6 @@ import java.util.List;
 
 public interface IGameItemService extends IGeneralService<GameItem> {
     List<GameItem> getItemListByGameSession(Long gameSessionId);
+
+    GameItem findItemByItemId(Long itemId);
 }

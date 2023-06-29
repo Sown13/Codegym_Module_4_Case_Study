@@ -74,4 +74,9 @@ public class GameSessionService implements IGameSessionService {
     public List<GameSession> findByUserEntityUserId(Long id) {
         return gameSessionRepo.findByUserEntityUserId(id);
     }
+
+    @Override
+    public GameSession findGameSessionByGameSessionId(Long gameSessionId) {
+        return gameSessionRepo.findGameSessionByGameSessionId(gameSessionId);
+    }
 }

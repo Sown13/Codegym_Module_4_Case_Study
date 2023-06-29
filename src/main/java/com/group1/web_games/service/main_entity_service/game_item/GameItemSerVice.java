@@ -38,4 +38,8 @@ public class GameItemSerVice implements IGameItemService {
         return gameItemRepo.findItemByGameSession(gameSessionId);
     }
 
+    @Override
+    public GameItem findItemByItemId(Long itemId) {
+        return gameItemRepo.findGameItemByItemId(itemId);
+    }
 }

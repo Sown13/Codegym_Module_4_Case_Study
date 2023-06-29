@@ -37,12 +37,13 @@ public class InventoryRestController {
         return new ResponseEntity<>(inventory.get(),HttpStatus.OK);
     }
     @PutMapping("{id}")
-    private ResponseEntity<Inventory>updateInventory(@PathVariable Long id){
-        Optional<Inventory>inventory= inventoryService.findById(id);
-        if(!inventory.isPresent()){
+    private ResponseEntity<Inventory>updateInventory(@PathVariable Long id,@RequestBody Inventory inventory){
+        Optional<Inventory>inventoryTemp= inventoryService.findById(id);
+        if(!inventoryTemp.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        inventoryService.save(inventory.orElse(null));
+        inventory.setInventoryId(inventoryTemp.get().getInventoryId());
+        inventoryService.save(inventory);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 //    @PutMapping("/{inventoryId}/game-item/{itemId}")

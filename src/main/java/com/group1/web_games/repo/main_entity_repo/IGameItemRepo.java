@@ -11,4 +11,6 @@ import java.util.List;
 public interface IGameItemRepo extends JpaRepository<GameItem, Long> {
     @Query("SELECT gi FROM GameItem gi JOIN Inventory iv ON gi.itemId = iv.gameItem.itemId JOIN GameSession gs ON iv.gameSession.gameSessionId = gs.gameSessionId WHERE gs.gameSessionId = :id")
     List<GameItem> findItemByGameSession(@Param("id") Long gameSessionId);
+
+    GameItem findGameItemByItemId (Long gameItemId);
 }

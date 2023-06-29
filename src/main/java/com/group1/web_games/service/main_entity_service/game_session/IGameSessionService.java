@@ -13,4 +13,6 @@ public interface IGameSessionService extends IGeneralService<GameSession> {
     List<GameSession> findByUserEntityUserId(Long id);
 
     List<GameSession> findGameSessionByUserId(Long userId);
+
+    GameSession findGameSessionByGameSessionId(Long gameSessionId);
 }

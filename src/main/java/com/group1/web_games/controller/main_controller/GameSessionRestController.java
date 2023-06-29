@@ -25,6 +25,10 @@ public class GameSessionRestController {
     private ResponseEntity<Iterable<GameSession>> findAllGameSession() {
         return new ResponseEntity<>(gameSessionService.findAll(), HttpStatus.OK);
     }
+    @GetMapping("{gameSessionId}")
+    private ResponseEntity<GameSession> findGameSessionByGameSessionId(@PathVariable Long gameSessionId) {
+        return new ResponseEntity<>(gameSessionService.findGameSessionByGameSessionId(gameSessionId), HttpStatus.OK);
+    }
     @GetMapping("/user/{userId}")
     private ResponseEntity<Iterable<GameSession>>findAllByUserId(@PathVariable Long userId){
         return new ResponseEntity<>(gameSessionService.findGameSessionByUserId(userId),HttpStatus.OK);
@@ -54,8 +58,8 @@ public class GameSessionRestController {
     //    @GetMapping("{id}")
 //    private ResponseEntity<Optional<GameSession>> findAllByUserId(@PathVariable Long id) {
 //        return new ResponseEntity<>(gameSessionService.findAllByUserId(id), HttpStatus.OK);
-    @GetMapping("{id}")
-    private ResponseEntity<List<GameSession>> findAllByUserId(@PathVariable Long id) {
-        return new ResponseEntity<>(gameSessionService.findByUserEntityUserId(id), HttpStatus.OK);
-    }
+//    @GetMapping("{id}")
+//    private ResponseEntity<List<GameSession>> findTuongByUserId(@PathVariable Long id) {
+//        return new ResponseEntity<>(gameSessionService.findByUserEntityUserId(id), HttpStatus.OK);
+//    }
 }
