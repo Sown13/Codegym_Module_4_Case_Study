@@ -17,27 +17,31 @@ import java.util.Optional;
 public class UserEntityRestController {
     @Autowired
     private IUserEntityService userEntityService;
+
     @PostMapping
-    private ResponseEntity<UserEntity> saveUserEntity(@RequestBody UserEntity userEntity){
+    private ResponseEntity<UserEntity> saveUserEntity(@RequestBody UserEntity userEntity) {
         return new ResponseEntity<>(userEntityService.save(userEntity), HttpStatus.OK);
     }
+
     @GetMapping
-    private ResponseEntity<Iterable<UserEntity>>findAllUserEntity(){
-        return new ResponseEntity<>(userEntityService.findAll(),HttpStatus.OK);
+    private ResponseEntity<Iterable<UserEntity>> findAllUserEntity() {
+        return new ResponseEntity<>(userEntityService.findAll(), HttpStatus.OK);
     }
+
     @DeleteMapping("{id}")
-    private ResponseEntity<UserEntity>deleteUserEntity(@PathVariable Long id){
-        Optional<UserEntity> userEntity=userEntityService.findById(id);
-        if(!userEntity.isPresent()){
+    private ResponseEntity<UserEntity> deleteUserEntity(@PathVariable Long id) {
+        Optional<UserEntity> userEntity = userEntityService.findById(id);
+        if (!userEntity.isPresent()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         userEntityService.remove(id);
-        return new ResponseEntity<>(userEntity.get(),HttpStatus.OK);
+        return new ResponseEntity<>(userEntity.get(), HttpStatus.OK);
     }
+
     @PutMapping("{id}")
-    private ResponseEntity<UserEntity>updateUserEntity(@PathVariable Long id){
-        Optional<UserEntity>userEntity=userEntityService.findById(id);
-        if(!userEntity.isPresent()){
+    private ResponseEntity<UserEntity> updateUserEntity(@PathVariable Long id) {
+        Optional<UserEntity> userEntity = userEntityService.findById(id);
+        if (!userEntity.isPresent()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         userEntityService.save(userEntity.orElse(null));
@@ -46,29 +50,34 @@ public class UserEntityRestController {
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody UserEntity userEntity) {
-        if (userEntityService.findByUserEmail(userEntity.getEmail()) != null) {
+        if (userEntityService.findByUserAccountName(userEntity.getAccountName()) != null) {
             return ResponseEntity.badRequest().body("Email already exists");
         } else {
             userEntityService.save(userEntity);
             return ResponseEntity.ok().body("User register successfully");
         }
     }
+
     @PostMapping("/login")
     public ResponseEntity<Map<String, Object>> login(@RequestBody UserEntity userLogin) {
         Map<String, Object> hasMap = new HashMap<>();
         String text;
 
-        UserEntity user = this.userEntityService.findByUserEmail(userLogin.getEmail());
+        UserEntity user = this.userEntityService.findByUserAccountName(userLogin.getAccountName());
         if (user != null) {
-            if (userLogin.getAccountPassword().equals(userLogin.getAccountPassword())) {
+            if (user.getAccountPassword().equals(userLogin.getAccountPassword())) {
                 text = "Đăng nhập thành công";
                 hasMap.put("text", text);
                 hasMap.put("user1234567890", user);
                 return new ResponseEntity<>(hasMap, HttpStatus.OK);
             } else {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                text = "Đăng nhập thất bại";
+                hasMap.put("text", text);
+                return new ResponseEntity<>(hasMap, HttpStatus.NOT_FOUND);
             }
         } else
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            text = "Đăng nhập thất bại";
+        hasMap.put("text", text);
+        return new ResponseEntity<>(hasMap, HttpStatus.NOT_FOUND);
     }
 }

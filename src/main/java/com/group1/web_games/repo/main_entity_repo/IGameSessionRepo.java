@@ -6,7 +6,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface IGameSessionRepo extends JpaRepository<GameSession,Long> {
+import java.util.List;
+import java.util.Optional;
 
+@Repository
+public interface IGameSessionRepo extends JpaRepository<GameSession, Long> {
+//    @Query(value = "SELECT gs FROM GameSession gs WHERE gs.userEntity.userId = :userId")
+//    Optional<GameSession> findAllByUserId(Long id);
+
+    List<GameSession> findByUserEntityUserId(Long userId);
 }

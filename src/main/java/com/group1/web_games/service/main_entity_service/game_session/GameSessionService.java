@@ -54,4 +54,14 @@ public class GameSessionService implements IGameSessionService {
         gameSessionRepo.deleteById(id);
     }
 
+
+//    @Override
+//    public Optional<GameSession> findAllByUserId(Long id) {
+//        return gameSessionRepo.findAllByUserId(id);
+//    }
+
+    @Override
+    public List<GameSession> findByUserEntityUserId(Long id) {
+        return gameSessionRepo.findByUserEntityUserId(id);
+    }
 }
