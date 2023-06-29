@@ -20,10 +20,6 @@ public class GameCharacterService implements IGameCharacterService {
     @Autowired
     private IGameCharacterRepo gameCharacterRepo;
     @Autowired
-    private ICharacterEquipmentSlotRepo characterEquipmentSlotRepo;
-    @Autowired
-    private IEquipmentSlotRepo equipmentSlotRepo;
-    @Autowired
     private ICharacterItemRepo characterItemRepo;
     @Autowired
     private ISkillRepo skillRepo;

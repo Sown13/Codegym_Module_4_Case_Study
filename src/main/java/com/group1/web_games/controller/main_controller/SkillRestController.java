@@ -29,7 +29,7 @@ public class SkillRestController {
         return new ResponseEntity<>(skillService.findSkillByAliveCharacterAndGameSession(gameSessionId),HttpStatus.OK);
     }
     @GetMapping("/game-session/{gameSessionId}/game-character/{characterId}")
-    private ResponseEntity<List<Skill>>findSkillBycharacterIdAndGameSession(@PathVariable("gameSessionId") Long gameSessionId,@PathVariable("characterId") Long characterId){
+    private ResponseEntity<List<Skill>>findSkillByCharacterIdAndGameSession(@PathVariable("gameSessionId") Long gameSessionId,@PathVariable("characterId") Long characterId){
         return new ResponseEntity<>(skillService.findSkillBycharacterIdAndGameSession(gameSessionId,characterId),HttpStatus.OK);
     }
     @DeleteMapping("{id}")

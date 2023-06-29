@@ -24,6 +24,10 @@ public class CharacterItemRestController {
     private ResponseEntity<Iterable<CharacterItem>>findAllCharacterItem(){
         return new ResponseEntity<>(characterItemService.findAll(),HttpStatus.OK);
     }
+    @GetMapping("/game-character/{gameCharacterId}")
+    private ResponseEntity<Iterable<CharacterItem>>findCharacterItemByCharacterId(@PathVariable Long gameCharacterId){
+        return new ResponseEntity<>(characterItemService.findCharacterItemByGameCharacterId(gameCharacterId),HttpStatus.OK);
+    }
     @DeleteMapping("{id}")
     private ResponseEntity<CharacterItem>deleteCharacterItem(@PathVariable Long id){
         Optional<CharacterItem> characterItem=characterItemService.findById(id);
